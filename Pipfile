@@ -10,6 +10,7 @@ pillow = "*"
 django-storages = "*"
 boto3 = "*"
 django-dotenv = "*"
+django-taggit = "*"
 
 [dev-packages]
 

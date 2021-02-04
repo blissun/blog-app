@@ -20,11 +20,12 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'blog.apps.BlogConfig',
 ]
 
 THIRD_PARTY_APPS = [
-
+    'taggit',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS

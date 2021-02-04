@@ -11,6 +11,7 @@ django-storages = "*"
 boto3 = "*"
 django-dotenv = "*"
 django-taggit = "*"
+djangorestframework = "*"
 
 [dev-packages]
 

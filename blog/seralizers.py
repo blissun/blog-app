@@ -6,7 +6,7 @@ from users.models import User
 class TinyUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'email',]
+        fields = ["pk", 'username', ]
 
 
 class PostSerializers(serializers.ModelSerializer):

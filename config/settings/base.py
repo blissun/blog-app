@@ -17,17 +17,18 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
 ]
 
 PROJECT_APPS = [
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
+    'core.apps.CoreConfig',
 ]
 
 THIRD_PARTY_APPS = [
     'taggit',
     'imagekit',
+    'rest_framework',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS

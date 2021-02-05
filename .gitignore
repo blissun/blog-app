@@ -1,6 +1,9 @@
 # IDE
 .idea
 
+templates
+static
+
 .env
 db.sqlite3
 

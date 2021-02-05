@@ -10,6 +10,7 @@ class User(AbstractUser):
         processors=[ResizeToFill(600, 600)],
         format='JPEG',
         options={'quality': 80},
+        blank=True
     )
 
     def __str__(self):

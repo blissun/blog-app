@@ -12,6 +12,7 @@ boto3 = "*"
 django-dotenv = "*"
 django-taggit = "*"
 djangorestframework = "*"
+pyjwt = "*"
 
 [dev-packages]
 

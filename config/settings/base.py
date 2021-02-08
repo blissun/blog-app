@@ -26,7 +26,7 @@ PROJECT_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    'taggit',
+    'taggit', 'taggit_serializer',
     'imagekit',
     'rest_framework',
 ]

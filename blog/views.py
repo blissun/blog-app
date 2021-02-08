@@ -7,7 +7,7 @@ from rest_framework.views import APIView
 
 from blog.models import Post
 from blog.permissions import IsAuthorOnly
-from blog.seralizers import PostSerializers
+from blog.seralizers import PostSerializers, WriteSerializers
 from users.models import User
 
 
@@ -40,3 +40,16 @@ class PostDetailView(RetrieveAPIView):
     permission_classes = [IsAuthorOnly]
     queryset = Post.objects.all()
     serializer_class = PostSerializers
+
+
+@api_view(["POST"])
+def PostCreateView(request):
+    if not request.user.is_authenticated:
+        return Response(status=status.HTTP_401_UNAUTHORIZED)
+    serializer = WriteSerializers(data=request.data)
+    if serializer.is_valid():
+        post = serializer.save(author=request.user)
+        post_serializer = PostSerializers(post).data
+        return Response(data=post_serializer, status=status.HTTP_201_CREATED)
+    else:
+        return Response(status=status.HTTP_400_BAD_REQUEST)

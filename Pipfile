@@ -13,6 +13,7 @@ django-dotenv = "*"
 django-taggit = "*"
 djangorestframework = "*"
 pyjwt = "*"
+django-taggit-serializer = "*"
 
 [dev-packages]
 
